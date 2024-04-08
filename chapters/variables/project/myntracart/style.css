@@ -1,0 +1,21 @@
+#upen {
+    background-color: grey;
+}
+
+#dhami {
+    background-color: rgb(30, 126, 210);
+}
+
+#bag {
+    border-radius: 20px;
+    padding: 5px 15px 5px 15px;
+    border: 0;
+    background-color: palegreen;
+}
+
+#wishlist {
+    border-radius: 10px;
+    padding: 5px 50px 5px 45px;
+    ;
+    text-transform: uppercase;
+}

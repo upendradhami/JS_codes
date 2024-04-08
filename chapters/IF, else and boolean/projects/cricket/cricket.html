@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>cricket</title>
+  <style>
+    body{text-align: center; font-size: x-large;
+       background-image: url(https://th.bing.com/th/id/R.344cb4d5426653bb4134b462fa36b97d?rik=IPK2Tgz2ZoWy8Q&pid=ImgRaw&r=0) ;
+      
+    background-repeat: no-repeat;
+    background-size: cover;}
+
+    .dami{border: 1px solid blue ;
+      background-color: brown;
+      padding: 15px; margin:5px;
+      font-size: larger;
+      border-radius: 5px;
+      }
+      .dami:hover{ padding:20px;
+      border-radius: 10px;}
+  </style>
+</head>
+<body>
+  <h1> computer v/s user cricket</h1>
+    <button class="dami" onclick="
+        let computerchoice;
+        let result;
+
+        //making computer choice;
+        let computer = Math.random()*3;
+
+        if(computer > 0 && computer < 1){
+          computerchoice ='ball';
+        }
+        if(computer >1 && computer < 2){
+          computerchoice ='bat';
+          }
+        if(computer > 2 && computer < 3){
+           computerchoice ='stump';
+        }
+        
+
+        // producing result on the basis of the choice of the computer and user
+        if(computerchoice === 'bat')
+        {result='you tie'}
+        if(computerchoice === 'ball')
+        {result='you won'}
+        if(computerchoice === 'stump')
+        {result='you lose'}
+          
+        alert(`your choice is bat \n computer's choice is ${computerchoice} \n ${result}`)
+          ">bat</button>
+
+    <button class="dami" onclick="
+     let computerchoice;
+     let result;
+     let computer = Math.random()*3;
+
+     if(computer > 0 && computer < 1){
+       computerchoice ='ball';
+     }
+     if(computer >1 && computer < 2){
+       computerchoice ='bat';
+       }
+     if(computer > 2 && computer < 3){
+        computerchoice ='stump';
+     }
+    
+     if(computerchoice === 'bat')
+     {result='you lose'}
+     if(computerchoice === 'ball')
+     {result= ` you tie `}
+     if(computerchoice === 'stump')
+     {result='you won'}
+     
+     alert( ` your choice is ball \n computer's choice is ${computerchoice} \n ${result}`)
+       ">ball</button>
+
+    <button class="dami"
+    onclick="
+   
+     let computerchoice;
+     let result;
+     let computer = Math.random()*3;
+
+     if(computer > 0 && computer < 1){
+       computerchoice ='ball';
+     }
+     if(computer >1 && computer < 2){
+       computerchoice ='bat';
+       }
+     if(computer > 2 && computer < 3){
+        computerchoice ='stump';
+     }
+     
+     if(computerchoice === 'bat')
+     {result='you won '}
+     if(computerchoice === 'ball')
+     {result= ` you lose`}
+     if(computerchoice === 'stump')
+     {result='you ties'}
+
+     alert(`your choice is stump \ncomputer's choice is ${computerchoice} \n ${result}`)
+       ">stump</button>
+    
+    <script>
+      
+    </script>
+</body>
+</html>
