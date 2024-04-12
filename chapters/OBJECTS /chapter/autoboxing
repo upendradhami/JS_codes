@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    autoboxing concept check on the console 
+    <script>
+        // we can treat the commands on console as objects also and can manipulate accordingly.
+       console.log('my name is upendra dhami '.indexOf());
+       console.log('here i come dear '.length)
+
+       console.log('i am learning through kg coding'.toUpperCase());
+       console.log('i can change the pg to programies in console by replace'.replace('pg','programmies'));
+
+    </script>
+</body>
+</html>
