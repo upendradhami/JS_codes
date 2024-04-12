@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>object_code</title>
+</head>
+<body>
+ check in the  console
+    
+<script>
+    let product = {
+        company: 'myntra' ,
+        price: 674 , 
+        discount: 10 , 
+        'dhami': 'upendra'
+    };
 
+    console.log(typeof product );
+
+    console.log(product);
+    console.log(product.company);
+    console.log(product.price);
+    console.log(product.discount);
+
+    // you can access the objects also as 
+    console.log(product['dhami']);
+    product.discount= 50
+    console.log(product.discount);
+
+    // we can also delete the objects like ;
+    delete company;
+    console.log(product);
+
+
+    //wecan store various things in the object like function, name ,integer and ALSO other objects too.
+
+     let mydetail ={
+         name: 'upendra',
+         age: 20,
+         DateofB: {
+             day: 11 , month: 4 , year: 2060,
+         },
+         ADdate: function(){
+            return `$${this.age}`;
+         }
+     };
+     console.log(mydetail);
+</script>
+</body>
+</html>
