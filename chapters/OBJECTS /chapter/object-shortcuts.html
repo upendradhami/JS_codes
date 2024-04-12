@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    we are learning some object shortcuts, like destructuring object, method shortcut
+    and object short hand
+    <script>
+        // lets see how to destructure object 
+        product= {
+             company: 'lorem ',
+             price: 554,
+             mfd: 223-23
+        };
+        
+       // let company = product.company; 
+        // is same as that of 
+         let { company } = product;
+        console.log(company);
+
+
+        //shorthand like predefining items in objects to use them .
+        let price=464;
+        product= {
+             company: 'lorem ',
+             price,
+             mfd: 223-23
+        };
+        console.log(price);  // or console.log(product.price)  works same 
+
+
+
+        // now let us know about methods shorthand for function 
+        product= {
+             company: 'lorem ',
+             price,
+             mfd: 223-23, 
+             upendra(){                // or  upendra : function(){}  works same 
+                return `${this.price}`;  
+             }
+        };
+        console.log(product.upendra());
+    </script>
+</body>
+</html>
