@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    objects are reference for the content inside it , 
+    further you can check in the console.
+    <script>
+        // let us assume two numbers and make reference to another of one.
+        let a=5;
+        let b=a;
+        console.log(`a:${a} ,b:${b}` ); // the value is same for a and b;
+        a=8;
+
+        console.log(`a:${a} ,b:${b}` ); // here you will find change in the value of a and b;
+
+        // but if we do the same for object let's see what happen 
+
+        let obj1 ={                      // created object
+            name: 'upendra',
+            roll: 47, 
+          };
+          let obj2= obj1;              //made obj2 reference of obj1 
+
+          console.log(`name1: ${obj1.name} , name2: ${obj2.name} `);
+            obj1.name ='anonymous';
+          console.log(`name1: ${obj1.name} , name2: ${obj2.name} `); //obj2 and obj1 are displayed same due to reference
+    </script>
+</body>
+</html>
