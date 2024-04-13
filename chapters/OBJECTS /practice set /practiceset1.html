@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title> practice set </title>
+</head>
+<body>
+    this is a practice set 
+    <script>
+        // making object for an product in myntra
+       let product ={
+            name: 'nautica',
+            mrp: 4560,
+            discount: '50%',
+            selling_price:2500,
+            gender: 'male',
+            'delivery-time' : 'within 24 hours of order',
+           
+        };
+
+        console.log(product);
+        console.log(typeof(product));
+
+        //making a reference object named product1 for product to changing the quantity in product
+        let product1 = product;
+        console.log(product1);
+        
+        // making changes in the original object.
+        product.name = 'denim';
+        product.mrp = '65560';
+ 
+        // lets see if there any changes in the reference object or not.
+        console.log(product1);
+
+        //using bracket notation in to represent the object's elements 
+        console.log(`your product is delivered  ${product['delivery-time']}`);
+
+        //making a new object with  element like message and status 
+        let obj ={
+            message: 'great job',
+            status: 'complete',
+        };
+
+        //destructuring objects message and status,
+        let{message, status} =obj;
+        console.log(message);
+        console.log(status);
+
+
+
+    </script>
+</body>
+</html>
