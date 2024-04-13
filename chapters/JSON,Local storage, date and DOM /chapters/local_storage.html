@@ -1,0 +1,37 @@
+      
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>local storage </title>
+</head>
+<body>
+    all you have to check is console
+    <script>
+        localStorage.setItem('name','upendra');
+        localStorage.setItem('course','computer engiineering');
+         
+        localStorage.removeItem('name');
+       // localStorage.clear();
+
+       let product = {
+        name: 'tshirt',
+        price: 599,
+        rating: {
+            stars: 4.5 ,
+            review: 'not so bad',
+        },
+       };
+        // here we have stored the product in the local storage 
+       localStorage.setItem('product1',JSON.stringify(product));
+     
+       // now we get the items by using getitems
+       let getit = JSON.parse(localStorage.getItem('product1'));
+        console.log(getit);
+
+        // becareful with the syntax here above
+        
+
+
+    </script>
+</body>
+</html>
