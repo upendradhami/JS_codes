@@ -1,1 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>cricket upgraded</title>
+  <style>
+    body{text-align: center; font-size: x-large;
+       background-image: url(https://th.bing.com/th/id/R.344cb4d5426653bb4134b462fa36b97d?rik=IPK2Tgz2ZoWy8Q&pid=ImgRaw&r=0) ;
+      
+    background-repeat: no-repeat;
+    background-size: cover;}
 
+    .dami{border: 1px solid blue ;
+      background-color: brown;
+      padding: 15px; margin:5px;
+      font-size: larger;
+      border-radius: 5px;
+      }
+      .dami:hover{ padding:20px;
+      border-radius: 10px;}
+  </style>
+</head>
+<body>
+  <h1> computer v/s user cricket</h1>
+    <button class="dami" onclick="
+         let computerchoice =choiceofcomp();
+         usermove ='bat';
+        // producing result on the basis of the choice of the computer and user
+       let result =getresult(usermove,computerchoice);
+          
+        showresult(usermove,computerchoice,result);
+          ">bat</button>
+
+    <button class="dami" onclick="
+  
+     let computerchoice= choiceofcomp();
+     usermove = 'ball';
+     result=getresult(usermove, computerchoice);
+     showresult(usermove,computerchoice,result);
+       ">ball</button>
+
+    <button class="dami"
+    onclick="
+      let computerchoice = choiceofcomp();
+          usermove = 'stump';
+      result = getresult(usermove,computerchoice);
+        showresult(usermove,computerchoice,result);
+        ">stump</button>
+    
+    <script>
+      
+      let score ={
+        win: 0, 
+        lose: 0, 
+        tie: 0,
+        calculate: function(){
+         return ` win: ${score.win} , lose: ${score.lose},tie: ${score.tie},
+          `
+        }
+      }; 
+
+      
+       let result;
+     
+      // using function making the choice of the computer.
+      function choiceofcomp() {
+           let computer = Math.random()*3;
+
+        if(computer > 0 && computer < 1){
+         return 'ball';
+        }
+        if(computer >1 && computer < 2){
+          return 'bat';
+          }
+        if(computer > 2 && computer < 3){
+           return 'stump';
+        }
+      }
+        //getting result
+
+        function getresult(usermove, computermove){
+          if(usermove === 'bat'){
+            if(computermove === 'bat')
+        { score.tie++; 
+          return 'you tie'}
+        if(computermove === 'ball')
+        { score.win++;
+           return 'you won'}
+        if(computermove === 'stump')
+        { score.lose++;
+           return 'you lose'}
+
+          }else if(usermove === 'ball'){
+          if(computermove === 'bat')
+          { score.lose++;
+            return'you lose'}
+           if(computermove === 'ball')
+          {score.tie++; 
+            return` you tie `}
+           if(computermove === 'stump')
+           { score.win++;
+            return'you won'}
+     
+          }else{
+        if(computermove === 'bat')
+        { score.win++;
+          return'you won '}
+        if(computermove=== 'ball')
+        { score.lose++;
+          return ` you lose`}
+        if(computermove === 'stump')
+        {score.tie++; 
+          return 'you ties'}
+
+          }
+        }
+
+        //for printing the results 
+        function showresult(usermove, computermove, result){
+          alert(`your choice is ${usermove} \ncomputer's choice is ${computermove} \n
+
+           ${result}
+           
+          ${score.calculate()}`)
+          
+        }
+       
+    </script>
+</body>
+</html>
