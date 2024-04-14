@@ -63,7 +63,7 @@
    }
 
 
-       score.calulate : function(){
+       score.calculate = function(){
          return ` win: ${score.win} , lose: ${score.lose},tie: ${score.tie},`;
       }
       
@@ -125,12 +125,12 @@
         
         //for printing the results 
         function showresult(usermove, computermove, result){
-          localStorage.setItem('Scoren',JSON.setItem(score));   //we made an update to store the score in local storage
+          localStorage.setItem('Scoren',JSON.stringify(score));   //we made an update to store the score in local storage
           alert(`your choice is ${usermove} \ncomputer's choice is ${computermove} \n
 
            ${result}
            
-          ${score.calculate()}`)
+          ${score.calculate()} `)
           
         }
        
