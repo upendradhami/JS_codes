@@ -17,6 +17,10 @@
       }
       .dami:hover{ padding:20px;
       border-radius: 10px;}
+
+      .dami:active{
+        background-color: blue;
+      }
   </style>
 </head>
 <body>
@@ -46,26 +50,40 @@
       result = getresult(usermove,computerchoice);
         showresult(usermove,computerchoice,result);
         ">stump</button>
+
+        <button class="dami" onclick="
+          localStorage.clear();
+          resetscore();">reset</button>
     
     <script>
     
-    
+    let score;
     let scorestr = localStorage.getItem('Scoren');
-    let score; 
-   if (scorestr !== undefined){
-    score = JSON.parse(scorestr);
-   }else{
-     score = {
+      function resetscore(scorestr){
+        score =  scorestr ? JSON.parse(scorestr) : {
       win: 0,
-      lost: 0,
+      lose: 0,
       tie: 0,
      };
-   }
 
-
-       score.calculate = function(){
+     score.calculate = function(){
          return ` win: ${score.win} , lose: ${score.lose},tie: ${score.tie},`;
       }
+      }
+  
+    
+  //  if (scorestr !== undefined){   // this method is also useful at the place of above statement.
+  //   score = JSON.parse(scorestr);
+  //  }else{
+  //    score = {
+  //     win: 0,
+  //     lost: 0,
+  //     tie: 0,
+  //    };
+  //  }
+
+
+       
       
        let result;
      
@@ -99,7 +117,7 @@
 
           }else if(usermove === 'ball'){
           if(computermove === 'bat')
-          { score.lose++;
+          { score.lose++ ;
             return'you lose'}
            if(computermove === 'ball')
           {score.tie++; 
