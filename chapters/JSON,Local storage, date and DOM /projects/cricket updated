@@ -4,7 +4,7 @@
     <title>cricket upgraded using json, local storage</title>
   <style>
     body{text-align: center; font-size: x-large;
-       background-image: url(https://th.bing.com/th/id/R.344cb4d5426653bb4134b462fa36b97d?rik=IPK2Tgz2ZoWy8Q&pid=ImgRaw&r=0) ;
+      /* / background-image: url(https://th.bing.com/th/id/R.344cb4d5426653bb4134b462fa36b97d?rik=IPK2Tgz2ZoWy8Q&pid=ImgRaw&r=0) ; */
       
     background-repeat: no-repeat;
     background-size: cover;}
@@ -53,8 +53,14 @@
 
         <button class="dami" onclick="
           localStorage.clear();
-          resetscore();">reset</button>
+          resetscore();
+          showresult();">reset</button>
     
+
+    <h4 id="user-choice"></h4>
+    <h4 id="computer-choice"></h4>
+    <h4 id="result"></h4>
+    <h4 id="myscore"></h4>
     <script>
     
     let score;
@@ -71,7 +77,6 @@
       }
       }
   
-    
   //  if (scorestr !== undefined){   // this method is also useful at the place of above statement.
   //   score = JSON.parse(scorestr);
   //  }else{
@@ -82,9 +87,6 @@
   //    };
   //  }
 
-
-       
-      
        let result;
      
       // using function making the choice of the computer.
@@ -140,15 +142,25 @@
           }
         }
          
-        
         //for printing the results 
         function showresult(usermove, computermove, result){
           localStorage.setItem('Scoren',JSON.stringify(score));   //we made an update to store the score in local storage
-          alert(`your choice is ${usermove} \ncomputer's choice is ${computermove} \n
+          document.querySelector('#user-choice').innerText =
+           (usermove !== undefined) ?`your choice is ${usermove}` : '' ;
 
-           ${result}
+          document.querySelector('#computer-choice').innerText =
+           computermove !== undefined ?`your choice is ${computermove}` : '';
+
+          document.querySelector('#result').innerText=
+          result !== undefined ? result: '';
+
+          document.querySelector('#myscore').innerText=
+          score.calculate();
+          // alert(`your choice is ${usermove} \ncomputer's choice is ${computermove} \n
+
+          //  ${result}
            
-          ${score.calculate()} `)
+          // ${score.calculate()} `)
           
         }
        
