@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    visit the console.
+    <script>
+        // push and pop  : add or remove to end.
+        let arr =[ 1,  90 , 'upendra ', 32,'dhami'];
+        console.log(arr);
+        arr.push(23);   // add  23 to array 
+        console.log(arr);
+       
+        console.log('popped ' + arr.pop()); // remove the number from last
+
+        //shift an  unshift is sama but it performd from the first .
+        console.log(arr);
+        arr.shift(2);   // add  23 to array 
+        console.log(arr);
+       
+        console.log('unshifted ' + arr.unshift());
+
+        //splice is used to remove or add elements .ie. no. of elements
+        arr.splice(2,3);
+        console.log(arr);
+    </script>
+</body>
+</html>
