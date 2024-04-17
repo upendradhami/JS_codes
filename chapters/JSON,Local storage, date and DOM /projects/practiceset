@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title> greet according to the time </title>
+     <style>
+        .one{
+            height: 100px;
+            width: 100px;
+            background-color: rebeccapurple;
+            border: none;
+            border-radius: 10px;
+            text-transform: capitalize;
+            font-size: x-large;
+            text-align: center;
+        }
+        #hero{ display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;}
+        #time{
+            font-size: xx-large;
+        }
+        .js-odd{
+            background-color: bisque;
+        }
+        .js-even{
+            background-color: brown;
+        }
+     </style>
+</head>
+<body>
+
+    <div id="hero">
+        <button class="one" onclick=" 
+         get_button();  change(); ">time</button>
+        <p id="time"></p> 
+        <div class="tim"></div>
+        <button onclick ='count =0;'>reset</button>
+    </div>
+    <script>
+        let count =  localStorage.getItem('num') || 0;
+        
+        let greet = new Date();
+        console.log(greet.getTime());// it provides you miliseconds since 1970, January 1.
+        let hours = greet.getHours();
+        function greetings(){
+            if(hours >= 3 && hours<12){
+                 return`good morning dear `;
+            } else if(hours >=12 && hours <17){
+                   return `good afternoon dear `;
+            } else{
+                  return `good evening have a great night dear `;
+            }
+        }  
+      
+        function get_button(){
+        document.querySelector('#time').innerText = greetings();
+        localStorage.setItem('num',count++);
+        document.querySelector('.tim').innerText = count;
+        change();
+        }
+          
+        function change(){
+            let colorc = document.querySelector('.one');
+            let num = parseInt(localStorage.getItem('num'))
+            console.log(num);
+            if(num %2 === 0){
+                colorc.classList.remove('js-odd');
+                colorc.classList.add('js-even');
+            }else{
+                colorc.classList.remove('js-even');
+                colorc.classList.add('js-odd');
+            }
+        }
+    </script>
+</body>
+</html>
