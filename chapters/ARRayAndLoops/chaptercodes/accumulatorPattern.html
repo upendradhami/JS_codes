@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Accumulator pattern  , break and continue ;</title>
+</head>
+<body>
+    
+    <script>
+        // we can loops for various purposes in real programming field it has huge possibilities over there.
+         let sum =0; 
+         let nums=[1,2,5,6,32,12];
+         for(let i=0; i< nums.length; i++){
+             sum +=nums[i];
+        }
+        console.log(sum);
+
+        //  let i=0; 
+        //  while(i<50){
+        //     console.log(i);
+           
+        //     if(i>34)      
+        //     {
+        //         break; // break goes out of the scope of loop and terminate the loop if condition is matched.
+        //     }
+        //     i++;
+        //  }
+        
+        let i=0;
+        do{
+            
+            if(i>=14 && i<=20)
+            {
+                i++;           // here if i++ is not done here it can crash your system by infinite loop.
+                continue;      // it skips the conditions members and continues the loops 
+              
+            }
+            console.log(i);
+            i++;
+
+         }while(i < 25);
+
+         
+    </script>
+</body>
+</html>
