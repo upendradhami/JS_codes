@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> array_method </title>
+</head>
+<body>
+       visit the console.
+    <script>
+        // push and pop  : add or remove to end.
+        let arr =[ 1,  90 , 'upendra ', 32,'dhami'];
+        console.log(arr);
+        arr.push(23);   // add  23 to array 
+        console.log(arr);
+       
+        console.log('popped ' + arr.pop()); // remove the number from last
+
+        //shift an  unshift is sama but it performd from the first .
+        console.log(arr);
+        arr.shift(2);   // add  23 to array
+        console.log(arr);
+       
+        console.log('unshifted ' + arr.unshift());
+
+        //splice is used to remove or add elements .ie. no. of elements
+        arr.splice(2,3);
+        console.log(arr);
+
+        arr.toString(); // it is used to print the array without brackets in string form
+        console.log(arr.toString()); 
+
+        console.log(arr.valueOf()); //it gets the value as it is.
+
+        arr2=arr;
+        arr2[2]=56;
+        
+        console.log(arr);
+
+        let arr3=[12,34,53,66,63,12,3];
+        let [a,b,c,d,e] = arr3;
+          console.log(a + ' ' + b +' ' + c + ' ' + d +' ' + e);
+        
+
+
+
+
+    </script>
+</body>
+</html>
